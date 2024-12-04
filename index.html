@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AR Viewer</title>
+    <script>
+        window.onload = function() {
+            const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+            if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                // Mostrar visor para iOS
+                document.getElementById("ios-ar").style.display = "block";
+            } else if (/android/i.test(userAgent)) {
+                // Mostrar visor para Android
+                document.getElementById("android-ar").style.display = "block";
+            } else {
+                // Dispositivo no compatible
+                document.getElementById("unsupported").style.display = "block";
+            }
+        };
+    </script>
+</head>
+<body>
+    <h1>Visualización de AR</h1>
+
+    <!-- Visor para iOS -->
+    <div id="ios-ar" style="display: none;">
+        <h2>Ver en AR (iOS)</h2>
+        <a rel="ar" href="https://dimitryx01.github.io/ra_ilerna/prueba.usdz">
+            <img src="https://via.placeholder.com/200" alt="Abrir en AR" />
+        </a>
+    </div>
+
+    <!-- Visor para Android -->
+    <div id="android-ar" style="display: none;">
+        <h2>Ver en AR (Android)
+        </h2>
+        <p>Recuerda instalar los servicios de Google Play para RA</p>
+        <model-viewer src="https://dimitryx01.github.io/ra_ilerna/prueba.glb" ar auto-rotate camera-controls style="width: 100%; height: 400px;">
+        </model-viewer>
+    </div>
+
+    <!-- Mensaje para dispositivos no compatibles -->
+    <div id="unsupported" style="display: none;">
+        <h2>Lo sentimos, tu dispositivo no es compatible con esta visualización.</h2>
+    </div>
+
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</body>
+</html>
