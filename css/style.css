@@ -1,0 +1,43 @@
+body{
+    text-align: center;
+    background-color: #fffaed;
+}
+.logo {
+    width: 100px;
+    padding-top: 20px;
+    margin: auto;
+}
+h1 {
+    font-family: "Dekko", cursive;
+    font-size: 26px;
+    font-style: normal;
+    color: rgb(0, 0, 0);
+    padding-left: 5%;
+    
+}
+.titulo{
+    margin-top: 5px;
+    height: 80px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    background-color: #fcceed;
+}
+
+.footer{
+    width: 130px;
+    padding-top: 20px;
+    margin: auto;
+    font-size: 9px;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.img-div img{
+    width: 100%;
+    transition: transform 0.2s ease; /* Animación suave */
+    cursor: pointer; /* Indica que es interactivo */
+    max-width: 100%; /* Asegura que la imagen se adapte al móvil */
+}
+  .img-div img:active {
+            transform: scale(2.2); /* Amplía un 20% al tocar */
+        }

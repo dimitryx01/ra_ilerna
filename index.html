@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AR Viewer</title>
+    <title>¿Que es una ip?</title>
     <script>
         window.onload = function() {
             const userAgent = navigator.userAgent || navigator.vendor || window.opera;
@@ -20,47 +20,60 @@
             }
         };
     </script>
+     <link rel="stylesheet" href="css/style.css" />
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dekko&display=swap" rel="stylesheet">
 </head>
 <body>
-    <a href="#">
-        <img src="https://www.ilerna.es/front-line/themes/ravioli/img/ilerna-logo.svg" alt="">
-    </a>
-    <h1>Visualización de AR - ¿Que es una IP?</h1>
-   
+    <div class="logo">
+        <a href="#">
+            <img src="https://www.ilerna.es/front-line/themes/ravioli/img/ilerna-logo.svg" alt="">
+        </a>
+    </div>  
+    <div class="titulo">
+         <h1>Visualización de AR - ¿Que es una IP?</h1>
+    </div>
     <!-- Visor para iOS -->
-    <div id="ios-ar" style="display: none;">
+    <div id="ios-ar" class="ios" style="display: none;">
         <h2>Ver en AR (iOS)</h2>
         <a rel="ar" href="https://dimitryx01.github.io/ra_ilerna/prueba.usdz">
-            <img src="https://via.placeholder.com/200" alt="Abrir en AR" />
+            <img src="img/back.png" alt="Abrir en AR" />
         </a>
         <a rel="ar" href="https://dimitryx01.github.io/ra_ilerna/android_6_2.usdz">
-            <img src="https://via.placeholder.com/200" alt="Abrir en AR" />
+            <img src="img/back.png" alt="Abrir en AR" />
         </a>
     </div>
 
     <!-- Visor para Android -->
-    <div id="android-ar" style="display: none;">
+    <div id="android-ar" class="android" style="display: none;">
         <h2>Ver en AR (Android)
         </h2>
-        <p>Recuerda instalar los servicios de Google Play para RA!</p>
-        <model-viewer src="https://dimitryx01.github.io/ra_ilerna/prueba_66.glb" ar auto-rotate camera-controls style="width: 100%; height: 400px;">
-        </model-viewer>
-        <model-viewer src="https://dimitryx01.github.io/ra_ilerna/prueba_6_2.glb" ar auto-rotate camera-controls style="width: 100%; height: 400px;">
-        </model-viewer>
-        <model-viewer src="https://dimitryx01.github.io/ra_ilerna/computer_classroom.glb" ar auto-rotate camera-controls style="width: 100%; height: 400px;">
-        </model-viewer>
+        <p>Recuerda instalar los servicios de Google Play para RA en tu dispositivo android</p>
+        
+       <!-- <model-viewer src="https://dimitryx01.github.io/ra_ilerna/computer_classroom.glb" ar auto-rotate camera-controls style="width: 100%; height: 400px;">
+        </model-viewer>-->
         <model-viewer src="https://dimitryx01.github.io/ra_ilerna/android_limpio.glb" ar auto-rotate camera-controls style="width: 100%; height: 400px;">
         </model-viewer>
+
         <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 
     </div>
 
     <!-- Mensaje para dispositivos no compatibles -->
     <div id="unsupported" style="display: none;">
-        <h2>Lo sentimos, tu dispositivo no es compatible con esta visualización.</h2>
+        <h2>Lo sentimos, tu dispositivo no es compatible con esta visualización. :(</h2>
     </div>
-    <h4>DAW 1 - Todos los derechos reservados. Diseño by styloo - fab.com</h4>
+    <div class="img-div"><img src="img/1_info.jpg"></div>
+    <div class="img-div"><img src="img/1_info.jpg"></div>
+    <p>Como dividir una red en 3 subredes</p>
+    <div class="img-div"><img src="img/div3.jpeg"></div>
+    <p>Como dividir una red en 3 subredes</p>
+    <div class="img-div"><img src="img/div4.jpeg"></div>
 
+    <div class="footer">
+    <p>DAW 1 - Todos los derechos reservados. Diseño 3D by styloo - fab.com</p>
+    </div>
 
     </body>
 </html>
